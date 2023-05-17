@@ -1,0 +1,80 @@
+.calc {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    font-family: Arial;
+    padding: 18px;
+    box-shadow: 6px, 6px, 6px #4f4f4f;
+}
+
+.calc-screen {
+    height: 125px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 25px;
+}
+
+.calc-screen p {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+
+}
+
+.buttons {
+    display: grid;
+    /* Сетка на гридах */
+    grid-template-areas:
+        "ac plus-minus percent division"
+        "seven eigth nine multi"
+        "four five six minus"
+        "one two three plus"
+        "zero zero dot equal";
+    /* Расстаяние между*/
+    grid-gap: 7px;
+    justify-items: center;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    /* выровнять по высоте */
+    font-size: 1.5 rem;
+    cursor: pointer;
+    user-select: none;
+    /* выкл выделение текста*/
+}
+
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
+}
+
+/*Эффект наведения */
+.btn:hover {
+    filter: brightness(130%);
+    /* увеличиваем яркость при навидении */
+}
+
+/* Состояние нажатия */
+.btn:active {
+    filter: brightness(90%);
+}
+
+.btn.bg-grey {
+    background: #a6a6a6;
+}
+
+.btn.bg-orange {
+    background: #ff9501;
+}
